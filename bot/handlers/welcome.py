@@ -25,9 +25,19 @@ DEFAULT_WELCOME = (
 )
 
 
+@router.my_chat_member()
+async def on_bot_status_change(event: ChatMemberUpdated):
+    """Handle bot's own membership changes (added/removed/promoted)."""
+    logger.info(
+        f"Bot status changed in {event.chat.title}: "
+        f"{event.old_chat_member.status} -> {event.new_chat_member.status}"
+    )
+
+
 @router.chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
 async def on_new_member(event: ChatMemberUpdated, bot: Bot):
     user = event.new_chat_member.user
+    logger.info(f"New member detected: {user.id} ({user.first_name}) in chat {event.chat.id}")
     if user.is_bot:
         return
 

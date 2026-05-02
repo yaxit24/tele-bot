@@ -63,7 +63,10 @@ async def main():
     # Start polling
     logger.info("Bot starting...")
     try:
-        await dp.start_polling(bot, allowed_updates=["message", "chat_member", "callback_query"])
+        await dp.start_polling(
+            bot,
+            allowed_updates=["message", "chat_member", "my_chat_member", "callback_query"],
+        )
     finally:
         scheduler.shutdown()
         await bot.session.close()
