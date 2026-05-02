@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.env
+data/bot.db
+*.session
+.DS_Store
+venv/
+.venv/

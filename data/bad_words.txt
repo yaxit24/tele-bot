@@ -1,0 +1,17 @@
+# Profanity word list — one word per line
+# Add words relevant to your community language
+# Lines starting with # are comments
+fuck
+shit
+bitch
+asshole
+bastard
+dick
+pussy
+cunt
+motherfucker
+nigger
+faggot
+retard
+whore
+slut

@@ -1,0 +1,8 @@
+# Spam regex patterns — one pattern per line
+# Lines starting with # are comments
+(earn|make)\s+\$?\d+.*?(daily|weekly|monthly)
+(join|click|visit)\s+.*?(t\.me|bit\.ly|tinyurl)
+free\s+(money|crypto|bitcoin|giveaway)
+(dm|message)\s+me\s+(for|to)\s+(earn|make)
+\b(whatsapp|telegram)\s*(\+?\d{10,})\b
+(investment|invest)\s+.*?(guaranteed|100%)
